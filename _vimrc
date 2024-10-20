@@ -1,7 +1,7 @@
 " Colorscheme {{{
 	set termguicolors
-	set background=dark
-	colorscheme iceberg
+	set background=light
+	colorscheme afterglow
 " }}}
 
 " GUI settings {{{
@@ -67,49 +67,46 @@ set shell=D:/w64devkit/bin/bash.exe " 设置默认命令行
 " Keyboard shortcut {{{
 let mapleader=","
 
-" Normal mode
-nnoremap <Leader><Space> :%s/\s\+$//g<Cr>
-
+" Movement
 nnoremap H ^
 nnoremap L $
+vnoremap H ^
+vnoremap L $
+onoremap H ^
+onoremap L $
 
-nnoremap <Leader>1 :resize +1<Cr>
-nnoremap <Leader>2 :resize -1<Cr>
-nnoremap <Leader>3 :vertical resize +1<Cr>
-nnoremap <Leader>4 :vertical resize -1<Cr>
-
+" Jump
 nnoremap <A-l> <C-]>
 nnoremap <A-h> <C-t>
 nnoremap <A-k> ''
 nnoremap <Leader><A-l> g<C-]>
 
+" Windows size
+nnoremap <Leader>1 :resize +1<Cr>
+nnoremap <Leader>2 :resize -1<Cr>
+nnoremap <Leader>3 :vertical resize +1<Cr>
+nnoremap <Leader>4 :vertical resize -1<Cr>
+
+" Tab Navigation
 nnoremap <Leader>wl :tabn<Cr>
 nnoremap <Leader>wh :tabp<Cr>
 
-nnoremap <Leader>cd :cd %:p:h<Cr>
-
-" Insert mode
+" completion
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
-inoremap ' ''<Left>
-inoremap " ""<Left>
 
-" Visual mode
-vnoremap H ^
-vnoremap L $
-
-" Movement
-onoremap H ^
-onoremap L $
-
-" System clipboard
+" clipboard
 nnoremap <Leader>p "*p
 vnoremap <Leader>p "*p
 vnoremap <Leader>y "*y
 
 " Plugin Shortcut
 nnoremap <Leader>t :NERDTreeToggle ./<Cr>
+
+" Other
+nnoremap <Leader>cd :cd %:p:h<Cr>
+nnoremap <Leader><Space> :%s/\s\+$//g<Cr>
 " }}}
 
 " Vimscript file settings {{{
