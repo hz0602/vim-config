@@ -1,7 +1,7 @@
 " Colorscheme {{{
 	set termguicolors
 	set background=light
-	colorscheme afterglow
+	colorscheme tokyonight
 " }}}
 
 " GUI settings {{{
@@ -102,10 +102,11 @@ vnoremap <Leader>p "*p
 vnoremap <Leader>y "*y
 
 " Plugin Shortcut
-nnoremap <Leader>t :NERDTreeToggle ./<Cr>
+nnoremap <Leader>t :NERDTreeToggle<Cr>
+nnoremap <Leader>d :NERDTreeToggle ./<Cr>
 
 " Other
-nnoremap <Leader>cd :cd %:p:h<Cr>
+nnoremap <Leader>c :cd %:p:h<Cr>
 nnoremap <Leader><Space> :%s/\s\+$//g<Cr>
 " }}}
 
