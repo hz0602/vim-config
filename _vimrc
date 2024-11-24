@@ -1,7 +1,7 @@
 " Colorscheme {{{
 	set termguicolors
-	set background=light
-	colorscheme tokyonight
+	set background=dark
+	colorscheme gruvbox
 " }}}
 
 " GUI settings {{{
@@ -20,7 +20,7 @@
 " }}}
 
 " Fundamental settings {{{
-set fillchars=vert:\│
+" set fillchars=vert:\│
 
 let $LANG = 'en'  "set message language
 set langmenu=en   "set menu's language of gvim. no spaces beside '='
@@ -61,7 +61,7 @@ set termencoding=utf-8
 
 set vb t_vb= "关闭响铃、闪屏
 set backspace=indent,eol,start " 插入模式下 backspace 有效
-set shell=D:/w64devkit/bin/bash.exe " 设置默认命令行
+set shell=/e/app/msys2/msys2
 " }}}
 
 " Keyboard shortcut {{{
@@ -95,6 +95,8 @@ nnoremap <Leader>wh :tabp<Cr>
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
 
 " clipboard
 nnoremap <Leader>p "*p
@@ -117,3 +119,5 @@ augroup filetype_vim
 	autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
+
+hi Normal guibg=NONE ctermbg=NONE
